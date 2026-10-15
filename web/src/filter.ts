@@ -2017,6 +2017,8 @@ export class Filter {
             !(this.has_operator("dm") || this.has_operand("is", "dm")) &&
             // not narrowed to starred messages
             !this.has_operand("is", "starred") &&
+            // not narrowed to alert words
+            !this.has_operand("is", "alerted") &&
             // not narrowed to negated home messages
             !this.has_negated_operand("in", "home") &&
             // not narrowed to muted topics messages
